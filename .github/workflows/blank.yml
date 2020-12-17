@@ -28,11 +28,13 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
-          pip install ansible-bender
+          sudo apt install python3.7
+          sudo apt install python3-pip
+          pip3 install ansible-bender
           # Debian Testing/Bullseye or Unstable/Sid
           sudo apt-get -y update
           sudo apt-get -y install podman
           sudo apt-get -y install buildah
           sudo sh -c "printf \"\n$(whoami):100000:65536\n\" >>/etc/subuid"
           sudo sh -c "printf \"\n$(whoami):100000:65536\n\" >>/etc/subgid"
-          /usr/bin/ansible-bender build main.yml fedora:30 our-httpd
+          ansible-bender build main.yml fedora:30 our-httpd
