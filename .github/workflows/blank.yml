@@ -28,7 +28,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
-          pip3 install ansible-bender
+          pip install ansible-bender
           # Debian Testing/Bullseye or Unstable/Sid
           apt-get -y update
           apt-get -y install podman
