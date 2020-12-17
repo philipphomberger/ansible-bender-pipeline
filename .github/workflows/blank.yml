@@ -28,6 +28,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
+          pip install setuptools
           sudo apt install python3.7
           sudo apt install python3-pip
           pip3 install ansible-bender
