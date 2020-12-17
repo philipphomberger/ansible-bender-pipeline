@@ -35,7 +35,4 @@ jobs:
           sudo apt-get -y install buildah
           sudo sh -c "printf \"\n$(whoami):100000:65536\n\" >>/etc/subuid"
           sudo sh -c "printf \"\n$(whoami):100000:65536\n\" >>/etc/subgid"
-
-      - name: ansible bender 
-        run: |
           ansible-bender build main.yml fedora:30 our-httpd
