@@ -28,10 +28,11 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
+          virtualenv -p /usr/bin/python3 /root/python3env
           pip3 install setuptools
           sudo apt install python3.7
           sudo apt install python3-pip
-          pip install ansible-bender
+          #pip install ansible-bender
           pip3 install ansible-bender
           # Debian Testing/Bullseye or Unstable/Sid
           sudo apt-get -y update
