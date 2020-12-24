@@ -42,4 +42,4 @@ jobs:
           PATH=$PATH:/home/runner/.local/bin/
           export PATH
           whereis ansible-bender
-          /home/runner/.local/bin/ansible-bender main.yml
+          /home/runner/.local/bin/ansible-bender build main.yml
