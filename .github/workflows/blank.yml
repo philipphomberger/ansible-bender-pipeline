@@ -39,6 +39,6 @@ jobs:
           sudo apt-get -y install buildah
           sudo sh -c "printf \"\n$(whoami):100000:65536\n\" >>/etc/subuid"
           sudo sh -c "printf \"\n$(whoami):100000:65536\n\" >>/etc/subgid"
+          PATH=$PATH:/home/runner/.local/bin/
+          export PATH
           whereis ansible-bender
-          sudo updatedb
-          locate ansible-bender
